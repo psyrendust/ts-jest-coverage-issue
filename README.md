@@ -84,3 +84,17 @@ Ran all test suites.
 - https://github.com/facebook/jest/issues/1907#issuecomment-254032111
 - https://github.com/kulshekhar/ts-jest/issues/61
 - https://github.com/kulshekhar/ts-jest/issues/42#issuecomment-256792842
+
+### Run the tests with npm
+
+```sh
+npm install
+npm test
+```
+
+### Run the tests with yarn
+
+```sh
+yarn install
+yarn test
+```
