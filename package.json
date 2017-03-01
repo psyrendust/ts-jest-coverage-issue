@@ -1,0 +1,70 @@
+{
+  "name": "ts-jest-coverage-issue",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=6.9.3",
+    "npm": ">3.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jest": "19.0.1",
+    "jest-cli": "19.0.1",
+    "ts-jest": "19.0.0",
+    "ts-node": "2.1.0",
+    "tslint": "4.4.2",
+    "typescript": "2.1.6"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!**/node_modules/**",
+      "!**/dist/**"
+    ],
+    "coverageDirectory": "./coverage",
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text"
+    ],
+    "globals": {
+      "__TS_CONFIG__": {
+        "module": "commonjs",
+        "removeComments": true,
+        "target": "es5"
+      }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
+    "rootDir": "./",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/?(*.)(spec|test).js?(x)",
+      "**/?(*.)(spec|test).ts?(x)"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "src/index.ts"
+    ]
+  }
+}
